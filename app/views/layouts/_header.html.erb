@@ -1,0 +1,54 @@
+<div id="navArea", style="background-color: #FEC463;">
+  <nav>
+    <div class="inner">
+      
+      <ul>
+        <li>
+                <a class="navbar-brand mx-5 img-thumbnail" href="/"><%= image_tag "logo.png", :size => "120x120" %></a>
+
+        </li>
+        <li class="nav-item">
+          <%= link_to "あ",about_path %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "い", about_path %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "う", about_path %>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="toggle_btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  
+  
+  <div id="mask"></div>
+
+</div>
+
+  
+  <script>
+    (function($) {
+      var $body   = $('body');
+      var $btn   = $('.toggle_btn');
+      var $mask  = $('#mask');
+      var open   = 'open'; // class
+      // menu open close
+      $btn.on( 'click', function() {
+        if ( ! $body.hasClass( open ) ) {
+          $body.addClass( open );
+        } else {
+          $body.removeClass( open );
+        }
+      });
+      // mask close
+      $mask.on('click', function() {
+        $body.removeClass( open );
+      });
+    } )(jQuery);
+  </script>
