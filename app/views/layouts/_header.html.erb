@@ -1,4 +1,4 @@
-<div id="navArea", style="background-color: #FEC463;">
+<div id="navArea">
   <nav>
     <div class="inner">
       <ul>
@@ -13,6 +13,9 @@
         </li>
         <li class="nav-item">
           <%= link_to "う", about_path %>
+        </li>
+        <li>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         </li>
       </ul>
     </div>
