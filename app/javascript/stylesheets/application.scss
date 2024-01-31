@@ -133,13 +133,12 @@ nav .inner ul li:not(:first-child):hover {
   cursor: pointer;
 }
 
-/*============
-#footer
-=============*/
-
-footer {
-  background: #fccc44;
-  height: 100px;
-  line-height: 100px;
-  color: #ffffff;
+#back {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+}
+.arrow{
+  width: 200px;
+  height: 300px;
 }

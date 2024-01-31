@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/ac7cef6f2b.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body style="background-color:#3c4c74;">
     <% if user_signed_in? %>
       <header>
         <%= render "layouts/header" %>
@@ -20,9 +20,11 @@
     <% end %>
       <main>
         <%= yield %>
+        <span id="back">
+          <a href="#" id="scrollButton">
+            <%= image_tag asset_path('rocket.png'), data: {"turbolinks"=>false}, class: "arrow" %>
+          </a>
+        </span>
       </main>
-      <footer>
-        <%= render "layouts/footer" %>
-      </footer>
   </body>
 </html>
