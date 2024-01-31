@@ -10,7 +10,7 @@ nav {
   left: -300px;
   bottom: 0;
   width: 300px;
-  background: #FFFF66;
+  background: #fccc44;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -29,6 +29,7 @@ nav .inner ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 nav .inner ul li {
   position: relative;
@@ -43,9 +44,10 @@ nav .inner ul li a {
   text-decoration: none;
   transition-duration: 0.2s;
 }
-nav .inner ul li a:hover {
+nav .inner ul li:not(:first-child):hover {
   background: #FFFFBB;
 }
+
 @media screen and (max-width: 767px) {
   nav {
     left: -220px;
@@ -130,26 +132,14 @@ nav .inner ul li a:hover {
   z-index: 2;
   cursor: pointer;
 }
+
 /*============
-main
+#footer
 =============*/
-main {
-  width: 100%;
-  transition: all .5s;
-}
-.open main {
-  margin-left: 300px;
-}
-main h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  text-align: center;
-}
-/*============
-body
-=============*/
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  overflow: hidden;
+
+footer {
+  background: #fccc44;
+  height: 100px;
+  line-height: 100px;
+  color: #ffffff;
 }

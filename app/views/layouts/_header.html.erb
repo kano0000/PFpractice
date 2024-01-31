@@ -3,16 +3,18 @@
     <div class="inner">
       <ul>
         <li>
-          <a class="navbar-brand mx-5 img-thumbnail" href="/"><%= image_tag "logo.png", :size => "120x120" %></a>
+          <%= link_to root_path do %>
+            <%= image_tag "logo.png", :size => "120x120" %>
+          <% end %>
         </li>
         <li class="nav-item">
           <%= link_to "あ",about_path %>
         </li>
         <li class="nav-item">
-          <%= link_to "い", about_path %>
+          <%= link_to "い", about_path  %>
         </li>
         <li class="nav-item">
-          <%= link_to "う", about_path %>
+          <%= link_to "う", about_path  %>
         </li>
         <li>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
